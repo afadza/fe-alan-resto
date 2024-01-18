@@ -64,8 +64,10 @@ function useOrder() {
     if (!totalKembalian || totalKembalian < 0) {
       setKurang(true);
     } else {
-      window.location.reload();
       Delete();
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
     }
   }
 
