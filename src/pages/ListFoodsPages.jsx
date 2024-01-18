@@ -10,7 +10,7 @@ function ListFoodsPages() {
     <Main>
       <div className="md:px-40 px-2 py-8">
         <div>
-          <p className="text-gray-500">
+          <p className="text-gray-500 pl-2 md:pl-0">
             Tambahkan menu makanan yang ada di resto
           </p>
         </div>
@@ -23,7 +23,7 @@ function ListFoodsPages() {
               + Tambah Menu
             </Link>
           </div>
-          <div className="w-full mt-8">
+          <div className="w-full mt-8 overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="w-full bg-gray-100 text-left h-12">
@@ -40,19 +40,19 @@ function ListFoodsPages() {
                     key={index}
                     className={index % 2 ? "bg-white" : "bg-gray-50"}
                   >
-                    <td className=" px-4 py-2">{index + 1}</td>
-                    <td className=" px-4 py-2">{product.name}</td>
-                    <td className=" px-4 py-2 h-14">
+                    <td className="px-4 py-2">{index + 1}</td>
+                    <td className="px-4 py-2">{product.name}</td>
+                    <td className="px-4 py-2 h-14">
                       <img
                         src={product.image}
                         alt=""
-                        className="w-24 h-full object-cover"
+                        className="w-20 h-full object-cover"
                       />
                     </td>
-                    <td className=" px-4 py-2">
+                    <td className="px-4 py-2">
                       Rp. {product.price ? formatPrice(product.price) : "-"}
                     </td>
-                    <td className="border-b border-[#eee] py-5 px-4 text-center">
+                    <td className="py-5 px-4 text-center">
                       <button
                         onClick={() => {
                           setIdDelete(product.id);
