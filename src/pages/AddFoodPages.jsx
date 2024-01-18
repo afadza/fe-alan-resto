@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import { MdOutlineCloudUpload } from "react-icons/md";
 import useProduct from "../hooks/useProduct";
 import useOrder from "../hooks/useOrder";
+import Loader from "../common/Loader";
 
 function AddFoodPages() {
   const {
@@ -15,6 +16,10 @@ function AddFoodPages() {
     form,
   } = useProduct();
   const { formatRupiah } = useOrder();
+
+  if (isPending) {
+    return <Loader />;
+  }
 
   return (
     <Main>

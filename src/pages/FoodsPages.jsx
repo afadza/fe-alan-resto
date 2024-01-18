@@ -7,7 +7,7 @@ import usePrint from "../hooks/usePrint";
 import { useState } from "react";
 import ModalComponent from "../components/ModalComponent";
 import SaveModalComponent from "../components/SaveModalComponent";
-
+import Loader from "../common/Loader";
 function FoodsPages() {
   const { Products } = useProduct();
   const { Orders, Order, setProductId, Delete, formatPrice, total } =
@@ -16,6 +16,9 @@ function FoodsPages() {
   const [saveModal, setSaveModal] = useState(false);
   const { printOrdersToPDF } = usePrint();
 
+  if (!Products) {
+    return <Loader />;
+  }
   return (
     <div className="w-full">
       {modal === false && saveModal === false ? (

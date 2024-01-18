@@ -3,9 +3,13 @@ import Main from "../layout/Main";
 import { Link } from "react-router-dom";
 import useProduct from "../hooks/useProduct";
 import { MdDelete } from "react-icons/md";
+import Loader from "../common/Loader";
 
 function ListFoodsPages() {
   const { Products, formatPrice, deleteProduct, setIdDelete } = useProduct();
+  if (!Products) {
+    return <Loader />;
+  }
   return (
     <Main>
       <div className="md:px-40 px-2 py-8">
