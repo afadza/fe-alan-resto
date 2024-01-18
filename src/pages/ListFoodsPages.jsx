@@ -29,9 +29,9 @@ function ListFoodsPages() {
                 <tr className="w-full bg-gray-100 text-left h-12">
                   <th className="px-4 py-2 w-10">#</th>
                   <th className="px-4 py-2 w-40">Nama</th>
-                  <th className="px-4 py-2 text-center w-48">Foto</th>
+                  <th className="px-4 py-2 w-48">Foto</th>
                   <th className="px-4 py-2 w-20 ">Harga</th>
-                  <th className="px-4 py-2 w-20  text-center">Hapus</th>
+                  <th className="px-4 py-2 w-20 text-center">Hapus</th>
                 </tr>
               </thead>
               <tbody>
@@ -42,11 +42,11 @@ function ListFoodsPages() {
                   >
                     <td className=" px-4 py-2">{index + 1}</td>
                     <td className=" px-4 py-2">{product.name}</td>
-                    <td className=" px-4 py-2 h-14 w-24 ">
+                    <td className=" px-4 py-2 h-14">
                       <img
                         src={product.image}
                         alt=""
-                        className="w-full h-full object-cover"
+                        className="w-24 h-full object-cover"
                       />
                     </td>
                     <td className=" px-4 py-2">
