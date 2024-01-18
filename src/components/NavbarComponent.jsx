@@ -7,11 +7,11 @@ function NavbarComponent() {
 
   return (
     <div className="w-full text-white shadow-lg">
-      <div className="bg-blue-500 flex gap-4 px-20 py-3 items-center">
+      <div className="bg-blue-500 flex gap-4 px-10 md:px-20 py-3 items-center">
         <MdFastfood size={30} />
         <p className="font-semibold text-3xl">Alan Resto</p>
       </div>
-      <div className="text-blue-500 flex gap-14 px-40 pt-3 font-semibold bg-gray-100">
+      <div className="text-blue-500 flex gap-14 px-10 md:px-40 pt-3 font-semibold bg-gray-100">
         <Link
           to="/"
           className={

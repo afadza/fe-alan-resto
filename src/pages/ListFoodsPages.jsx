@@ -46,7 +46,7 @@ function ListFoodsPages() {
                       <img
                         src={product.image}
                         alt=""
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </td>
                     <td className=" px-4 py-2">

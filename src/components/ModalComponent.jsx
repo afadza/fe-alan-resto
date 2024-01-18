@@ -25,7 +25,7 @@ function ModalComponent({ modal, setModal }) {
   return (
     <Main>
       <div className="w-full px-2 md:px-32 py-8 flex flex-col md:flex-row gap-8 md:gap-0">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-3/4 h-full md:pl-0 pl-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 w-full md:w-3/4 h-full">
           {Products?.map((product, index) => (
             <button
               onClick={() => {
@@ -33,12 +33,12 @@ function ModalComponent({ modal, setModal }) {
                 Order();
               }}
               key={index}
-              className="w-48 bg-white rounded-sm flex flex-col shadow-md shadow-gray-300"
+              className="w-full md:w-48 bg-white rounded-sm flex flex-col shadow-md shadow-gray-300"
             >
               <img
                 src={product.image}
                 alt=""
-                className="w-full h-40 object-contain bg-gray-50"
+                className="w-full h-40 object-cover bg-gray-50"
               />
               <div className="text-center py-2 items-center flex flex-col justify-center w-full">
                 <p className="font-semibold">{product.name}</p>
@@ -63,7 +63,7 @@ function ModalComponent({ modal, setModal }) {
                       <img
                         src={order.product.image}
                         alt=""
-                        className="w-24 h-full object-contain bg-gray-50 rounded-sm"
+                        className="w-24 h-full object-cover bg-gray-50 rounded-sm"
                       />
                       <p>{order.product.name}</p>
                     </div>
@@ -130,7 +130,7 @@ function ModalComponent({ modal, setModal }) {
                     <tr className="w-full bg-gray-100 text-left h-12">
                       <th className="px-4 py-2 w-10">#</th>
                       <th className="px-4 py-2 w-40">Nama</th>
-                      <th className="px-4 py-2 text-center w-48">Foto</th>
+                      <th className="px-4 py-2 w-48">Foto</th>
                       <th className="px-4 py-2 w-20 ">Harga</th>
                     </tr>
                   </thead>
@@ -152,7 +152,7 @@ function ModalComponent({ modal, setModal }) {
                           <img
                             src={order.product.image}
                             alt=""
-                            className="w-full h-full object-contain"
+                            className="w-20 h-full object-cover"
                           />
                         </td>
                         <td className="px-4 py-2">
